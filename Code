@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoGenius Tools</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    async function generateResume() {
+      const name = document.getElementById("name").value;
+      const summary = document.getElementById("summary").value;
+      const output = `\n**Name:** ${name}\n\n**Professional Summary:**\n${summary}\n\n**Skills:**\n- Communication\n- Teamwork\n- Problem-solving\n- Time management`;
+      document.getElementById("resumeOutput").innerText = output;
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-4 shadow-md">
+    <h1 class="text-3xl font-bold">AutoGenius Tools</h1>
+    <p class="text-sm">Free Online Tools for Everyday Tasks</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6">
+    <!-- Tool Section: AI Resume Maker -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">AI Resume Maker</h2>
+      <div class="bg-white p-4 shadow rounded">
+        <label class="block mb-2 font-medium">Your Name</label>
+        <input type="text" id="name" class="w-full border p-2 mb-4 rounded" placeholder="John Doe">
+
+        <label class="block mb-2 font-medium">Professional Summary</label>
+        <textarea id="summary" class="w-full border p-2 mb-4 rounded" placeholder="Enter your career summary here..."></textarea>
+
+        <button onclick="generateResume()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate Resume</button>
+
+        <div class="mt-6">
+          <h3 class="text-lg font-semibold">Your Resume:</h3>
+          <pre id="resumeOutput" class="bg-gray-200 p-4 rounded mt-2 whitespace-pre-wrap"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Tools List -->
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">More Tools (Coming Soon)</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-gray-200 p-4 rounded text-center">Grammar Checker</div>
+        <div class="bg-gray-200 p-4 rounded text-center">Urdu to English Translator</div>
+        <div class="bg-gray-200 p-4 rounded text-center">PDF Compressor</div>
+        <div class="bg-gray-200 p-4 rounded text-center">Logo Creator</div>
+        <div class="bg-gray-200 p-4 rounded text-center">QR Code Generator</div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">About</h2>
+      <p>This platform offers 100% free tools powered by AI and automation. Whether you're a student, freelancer, or job seeker, these tools help you work faster and smarter.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Contact / Feedback</h2>
+      <p>Email: contact@autogeniustools.com (replace with your email)</p>
+      <p>WhatsApp: +92-3xx-xxxxxxx</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center p-4 mt-6">
+    <p>&copy; 2025 AutoGenius Tools. All rights reserved.</p>
+  </footer>
+</body>
+</html>
